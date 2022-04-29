@@ -1,0 +1,79 @@
+// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+//@import '~icheck/skins/all.css';
+@import '~icheck/skins/square/green.css';
+@import '~icheck/skins/line/green.css';
+@import '~icheck/skins/line/aero.css';
+
+@import '~animate.css/animate.min.css';
+
+// Variables
+@import 'variables';
+
+$font-family-sans-serif: 'Lato', sans-serif;
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
+
+.container.stage, .container-fluid.stage {
+    background-color: rgba(248, 250, 252, 0.85);
+    border-radius: 5px;
+    padding: 15px;
+    min-height: calc(100vh - 130px);
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #627728;
+}
+
+h1 {
+    color: $blue;
+}
+
+.icheckbox_line-green, .iradio_line-green, .icheckbox_line-aero, .iradio_line-aero {
+    margin: 5px;
+    max-width: 120px;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .form-group {
+      margin-bottom: 2em;
+  }
+
+
+.next-day {
+    th { vertical-align: middle; }
+}
+
+.customer-page {
+    .table-striped > tbody > tr.status-C:nth-of-type(odd),
+    tr.status-C {
+        color: $red!important;
+    }
+}
+
+.ca-sales {
+    .status-C {
+        color: $red!important;
+    }
+}
+
+@media print {
+    body, .container.stage, .container-fluid.stage {
+        background-color: #ffffff!important;
+    }
+}
