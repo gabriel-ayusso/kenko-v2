@@ -2823,7 +2823,7 @@ __webpack_require__.r(__webpack_exports__);
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                 className: "col-md-6 text-end",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                  "class": "d-grid gap-2",
+                  className: "d-grid gap-2",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
                     className: "btn btn-primary",
                     onClick: function onClick() {

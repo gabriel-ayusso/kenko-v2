@@ -21,7 +21,7 @@ export default props => {
                                     <span className="mt-2" style={{ fontSize: 14, display: 'block' }}>R$ {parseFloat(props.service.price).toFixed(2)}</span>
                                 </div>
                                 <div className="col-md-6 text-end">
-                                    <div class="d-grid gap-2">
+                                    <div className="d-grid gap-2">
                                         <button className="btn btn-primary" onClick={() => props.onClick(props.service)}><i className="far fa-calendar me-1"></i> Agendar</button>
                                     </div>
                                 </div>
