@@ -66,8 +66,10 @@
                             </div>
                             <div class="col-md-8 offset-md-4">
                                 <p class="text-center">ou</p>
-                                <a href="{{route('facebook.login')}}" class="btn btn-primary btn-block"><i class="fab fa-facebook-f fa-lg mr-2"></i> Facebook</a>
-                                <!-- <a href="{{route('instagram.login')}}" class="btn btn-primary btn-block"><i class="fab fa-instagram fa-lg mr-2"></i> Instagram</a> -->
+                                <div class="d-grid gap-2">
+                                    <a href="{{route('facebook.login')}}" class="btn btn-primary btn-block"><i class="fab fa-facebook-f fa-lg me-2"></i> Facebook</a>
+                                    <!-- <a href="{{route('instagram.login')}}" class="btn btn-primary btn-block"><i class="fab fa-instagram fa-lg me-2"></i> Instagram</a> -->
+                                </div>
                             </div>
                         </div>
                     </form>

@@ -20,8 +20,8 @@
             <form method="POST" action="{{route('services.destroy', $service)}}" class="form-inline">
                 @csrf
                 @method('DELETE')
-                <a href="{{route('services.index')}}" class="btn btn-outline-primary mr-2">Voltar</a>
-                <a href="{{route('services.edit', $service)}}" class="btn btn-primary mr-2">Editar</a>
+                <a href="{{route('services.index')}}" class="btn btn-outline-primary me-2">Voltar</a>
+                <a href="{{route('services.edit', $service)}}" class="btn btn-primary me-2">Editar</a>
                 <button type="submit" onclick="return confirm('Você confirma a exclusão desse serviço?')" class="btn btn-danger">Excluir</button>
             </form>
         </div>

@@ -6,7 +6,7 @@
         <h1>Usuários do sistema</h1>
     </div>
     <div class="col-md-6 clearfix">
-        <a href="{{route('users.create')}}" class="btn btn-primary float-right"><i class="fa fa-plus mr-2"></i> Novo</a>
+        <a href="{{route('users.create')}}" class="btn btn-primary float-right"><i class="fa fa-plus me-2"></i> Novo</a>
     </div>
 </div>
 

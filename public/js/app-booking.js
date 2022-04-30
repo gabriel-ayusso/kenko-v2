@@ -2377,7 +2377,7 @@ var Booking = /*#__PURE__*/function (_React$Component) {
                     return value.employee.id === employee.id;
                   }).map(function (availability, idx) {
                     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-                      className: "btn btn-primary mr-2 mb-2",
+                      className: "btn btn-primary me-2 mb-2",
                       onClick: function onClick() {
                         return _this2.handleStage2(availability);
                       },
@@ -2410,31 +2410,20 @@ var Booking = /*#__PURE__*/function (_React$Component) {
               children: "Navegue pelo servi\xE7o"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-            className: "col-md-6",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-              className: "input-group",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
-                type: "text",
-                className: "form-control",
-                placeholder: "Buscar servi\xE7o...",
-                "aria-label": "Buscar servi\xE7o...",
-                "aria-describedby": "basic-addon2",
-                value: this.state.search,
-                onChange: function onChange(e) {
-                  return _this2.setState({
-                    search: e.target.value
-                  });
-                }
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-                className: "input-group-append",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                  className: "input-group-text",
-                  id: "basic-addon2",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
-                    className: "fas fa-search"
-                  })
-                })
-              })]
+            className: "col-md-6 d-flex justify-content-end",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+              type: "text",
+              className: "form-control",
+              placeholder: "Buscar servi\xE7o...",
+              style: {
+                maxWidth: 400
+              },
+              value: this.state.search,
+              onChange: function onChange(e) {
+                return _this2.setState({
+                  search: e.target.value
+                });
+              }
             })
           })]
         }), this.state.loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_commons_Spinner__WEBPACK_IMPORTED_MODULE_2__["default"], {}) : this.state.totalServices === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
@@ -2484,13 +2473,9 @@ var Booking = /*#__PURE__*/function (_React$Component) {
                   children: this.state.current.name
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
                   type: "button",
-                  className: "close",
-                  "data-dismiss": "modal",
-                  "aria-label": "Close",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                    "aria-hidden": "true",
-                    children: "\xD7"
-                  })
+                  className: "btn-close",
+                  "data-bs-dismiss": "modal",
+                  "aria-label": "Close"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
                 className: "modal-body",
@@ -2686,7 +2671,7 @@ var BookingForm = /*#__PURE__*/function (_React$Component) {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
                     type: "button",
                     onClick: _this2.handleGoBack,
-                    className: "btn btn-outline-primary mr-2",
+                    className: "btn btn-outline-primary me-2",
                     children: "Voltar"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
                     type: "submit",
@@ -2798,17 +2783,20 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    className: "col-md-3",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "card text-white bg-secondary mb-3 animated fadeIn",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "col-lg-3 col-md-4 d-flex align-items-stretch",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "card bg-light mb-3 animated fadeIn",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h5", {
+        className: "card-header",
+        children: props.service.name
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "card-body",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h5", {
-          className: "card-title",
-          children: props.service.name
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "card-text",
-          children: [props.service.description, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "card-text d-flex flex-column justify-content-between h-100",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "flex-grow",
+            children: props.service.description
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
             className: "mt-2 py-2",
             style: {
               borderTop: '1px solid #ccc'
@@ -2819,12 +2807,13 @@ __webpack_require__.r(__webpack_exports__);
                 className: "col-md-6",
                 children: [props.service.employees.map(function (employee, idx) {
                   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
-                    className: "badge bg-light text-dark me-1",
+                    className: "badge bg-secondary text-white me-1",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
                       className: "fas fa-spa"
                     }), " ", employee.firstname, " ", employee.lastname]
                   }, idx);
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+                  className: "mt-2",
                   style: {
                     fontSize: 14,
                     display: 'block'
@@ -2833,20 +2822,23 @@ __webpack_require__.r(__webpack_exports__);
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                 className: "col-md-6 text-end",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
-                  className: "btn btn-light btn-block",
-                  onClick: function onClick() {
-                    return props.onClick(props.service);
-                  },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "far fa-calendar mr-1"
-                  }), " Agendar"]
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                  "class": "d-grid gap-2",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+                    className: "btn btn-primary",
+                    onClick: function onClick() {
+                      return props.onClick(props.service);
+                    },
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                      className: "far fa-calendar me-1"
+                    }), " Agendar"]
+                  })
                 })
               })]
             })
           })]
-        })]
-      })
+        })
+      })]
     })
   });
 });

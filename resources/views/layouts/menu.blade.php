@@ -12,7 +12,7 @@
 @endif
 @if(Auth::user()->agenda)
 <li class="nav-item {{ Route::is('home') || Route::is('dashboard') ? 'active' : '' }}">
-    <a class="nav-link" href="{{route('manager.weekly')}}"><i class="far fa-calendar-check fa-lg mr-2"></i> Semana</a>
+    <a class="nav-link" href="{{route('manager.weekly')}}"><i class="far fa-calendar-check fa-lg me-2"></i> Semana</a>
 </li>
 @endif
 @if(Auth::user()->admin)
@@ -41,9 +41,9 @@
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownManager">
         <a class="dropdown-item" href="{{ url('/manager/dashboard') }}"><i class="fas fa-tasks fa-lg"></i> Visão Geral</a>
-        <a class="dropdown-item" href="{{route('manager.weekly2')}}"><i class="far fa-calendar-check fa-lg mr-2"></i> Semana</a>
-        <a class="dropdown-item" href="{{route('manager.nextday')}}"><i class="fas fa-calendar-day fa-lg mr-2"></i> Visão Dia</a>
-        <a class="dropdown-item" href="{{route('manager.customer')}}"><i class="fas fa-person-rays fa-lg mr-2"></i> Cliente</a>
+        <a class="dropdown-item" href="{{route('manager.weekly2')}}"><i class="far fa-calendar-check fa-lg me-2"></i> Semana</a>
+        <a class="dropdown-item" href="{{route('manager.nextday')}}"><i class="fas fa-calendar-day fa-lg me-2"></i> Visão Dia</a>
+        <a class="dropdown-item" href="{{route('manager.customer')}}"><i class="fas fa-person-rays fa-lg me-2"></i> Cliente</a>
         <a class="dropdown-item" href="{{ route('transactions.index') }}"><i class="fas fa-money-check-alt"></i> Transações</a>
         <a class="dropdown-item" href="{{ route('booking.index') }}"><i class="far fa-calendar-alt"></i> Agendamentos</a>
     </div>

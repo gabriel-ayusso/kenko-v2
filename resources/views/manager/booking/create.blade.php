@@ -71,7 +71,7 @@
 
                 <div class="row">
                     <div class="col-sm-10 offset-sm-2">
-                        <a href="{{route('booking.index')}}" class="btn btn-outline-primary mr-2">Voltar</a>
+                        <a href="{{route('booking.index')}}" class="btn btn-outline-primary me-2">Voltar</a>
                         <button type="submit" class="btn btn-primary">Salvar</button>
                     </div>
                 </div>

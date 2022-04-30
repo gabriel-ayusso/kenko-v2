@@ -99,7 +99,7 @@ export default class BookingForm extends React.Component {
 
                                 <div className="form-group row">
                                     <div className="col-lg-10 offset-lg-2">
-                                        <button type="button" onClick={this.handleGoBack} className="btn btn-outline-primary mr-2">Voltar</button>
+                                        <button type="button" onClick={this.handleGoBack} className="btn btn-outline-primary me-2">Voltar</button>
                                         <button type="submit" disabled={isSubmitting} className="btn btn-primary">Agendar</button>
                                     </div>
                                 </div>

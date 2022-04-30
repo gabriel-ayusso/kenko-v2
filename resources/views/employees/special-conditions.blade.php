@@ -32,7 +32,7 @@
                         @method('PUT')
                         <input type="hidden" name="employee_id" value="{{$employee->id}}">
                         <input type="hidden" name="service_id" value="{{$service->id}}">
-                        <input type="number" class="form-control mr-2" step="0.01" name="comission" value="{{old('comission',number_format($service->pivot->comission, 2))}}">
+                        <input type="number" class="form-control me-2" step="0.01" name="comission" value="{{old('comission',number_format($service->pivot->comission, 2))}}">
                         <button type="submit" class="btn btn-sm btn-primary"><i class="far fa-save fa-lg"></i></button>
                     </form>
                 </td>

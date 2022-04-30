@@ -44,8 +44,8 @@ export default class Booking extends React.Component {
     }
 
     handleSelectService = (service) => {
-        this.setState({ 
-            current: service, 
+        this.setState({
+            current: service,
             bookingStage: 1,
             availables: null,
         });
@@ -117,7 +117,7 @@ export default class Booking extends React.Component {
                                             <h5 className="text-primary">{employee.firstname} {employee.lastname}</h5>
 
                                             {this.state.availables.filter((value) => value.employee.id === employee.id).map((availability, idx) => (
-                                                <button className="btn btn-primary mr-2 mb-2" key={idx} onClick={() => this.handleStage2(availability)}>
+                                                <button className="btn btn-primary me-2 mb-2" key={idx} onClick={() => this.handleStage2(availability)}>
                                                     {moment(availability.time).format('HH:mm')}
                                                 </button>
                                             ))}
@@ -141,13 +141,8 @@ export default class Booking extends React.Component {
                     <div className="col-md-6">
                         <h2>Navegue pelo serviço</h2>
                     </div>
-                    <div className="col-md-6">
-                        <div className="input-group">
-                            <input type="text" className="form-control" placeholder="Buscar serviço..." aria-label="Buscar serviço..." aria-describedby="basic-addon2" value={this.state.search} onChange={(e) => this.setState({ search: e.target.value })} />
-                            <div className="input-group-append">
-                                <span className="input-group-text" id="basic-addon2"><i className="fas fa-search"></i></span>
-                            </div>
-                        </div>
+                    <div className="col-md-6 d-flex justify-content-end">
+                        <input type="text" className="form-control" placeholder="Buscar serviço..." style={{maxWidth: 400}} value={this.state.search} onChange={(e) => this.setState({ search: e.target.value })} />
                     </div>
                 </div>
 
@@ -178,9 +173,7 @@ export default class Booking extends React.Component {
                         <div className="modal-content">
                             <div className="modal-header">
                                 <h5 className="modal-title" id="modalBookingLabel">{this.state.current.name}</h5>
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div className="modal-body">
                                 {this.state.bookingStage === 1 ? stage1 : stage2}

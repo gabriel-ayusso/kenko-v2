@@ -26,9 +26,9 @@
 
                     <div class="row mt-2">
                         <div class="col-sm-10 offset-sm-2">
-                            <button type="submit" class="btn btn-primary mr-2">Salvar</button>
+                            <button type="submit" class="btn btn-primary me-2">Salvar</button>
                             @if(Auth::user()->admin)
-                            <a href="{{route('availabilities.index', $employee)}}" class="btn btn-outline-primary mr-2">Disponibilidade</a>
+                            <a href="{{route('availabilities.index', $employee)}}" class="btn btn-outline-primary me-2">Disponibilidade</a>
                             <a href="{{route('unavailabilities.index', $employee)}}" class="btn btn-outline-warning">Ausências</a>
                             <a href="{{route('employees.special-conditions', $employee)}}" class="btn btn-outline-warning">Condições especiais</a>
                             @endif

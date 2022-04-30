@@ -34,7 +34,7 @@
                     <div class="row">
                         <div class="col-sm-10 offset-sm-2">
                             <a href="javascript:history.back()" class="btn btn-outline-primary">Voltar</a>
-                            <button type="submit" class="btn btn-primary mr-4">Salvar</button>
+                            <button type="submit" class="btn btn-primary me-4">Salvar</button>
                             <button type="submit" form="reset-password" class="btn btn-warning">Alterar a senha</button>
                         </div>
                     </div>

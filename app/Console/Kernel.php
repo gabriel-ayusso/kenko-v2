@@ -15,6 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->command('sms:reminder')->dailyAt(env('APP_SMS_LEMBRETE_HORA'));
         // $schedule->command('inspire')->hourly();
     }
 

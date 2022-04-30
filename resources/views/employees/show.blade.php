@@ -32,8 +32,8 @@
             @csrf
             @method('DELETE')
 
-            <a href="{{route('employees.index')}}" class="btn btn-outline-primary mr-2">Voltar</a>
-            <a href="{{route('employees.edit', $employee)}}" class="btn btn-primary mr-2">Editar</a>
+            <a href="{{route('employees.index')}}" class="btn btn-outline-primary me-2">Voltar</a>
+            <a href="{{route('employees.edit', $employee)}}" class="btn btn-primary me-2">Editar</a>
             <button type="submit" class="btn btn-danger" onclick="return confirm('Deseja mesmo excluir esse funcionário?')">Excluir</button>
         </form>
     </div>

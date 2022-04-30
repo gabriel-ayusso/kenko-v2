@@ -13,7 +13,7 @@ $today = Carbon\Carbon::parse('today');
     </div>
     <div class="col-md-6 text-right">
         <form action="{{route('manager.dashboard')}}" id="cycle_form">
-            <!-- <a href="{{route('manager.weekly')}}" class="btn btn-primary "><i class="far fa-calendar-check fa-lg mr-2"></i> Semana</a> -->
+            <!-- <a href="{{route('manager.weekly')}}" class="btn btn-primary "><i class="far fa-calendar-check fa-lg me-2"></i> Semana</a> -->
             <a href="{{route('manager.todaysummary')}}" class="btn btn-outline-primary ">D</a>
             <a href="{{route('manager.tomorrowsummary')}}" class="btn btn-outline-primary ">D + 1</a>
             <select name="cycle_id" id="cycle_id" class="form-control float-right ml-2" style="max-width: 250px" onchange="cycle_form.submit()">
