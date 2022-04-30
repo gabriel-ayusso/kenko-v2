@@ -38,7 +38,7 @@ $total = 0;
             <tr>
                 <td>{{$booking->date->format('d/m')}} <strong>{{$booking->date->format('H:i')}}</strong></td>
                 <td>
-                    @if($booking->ca_customer_id)
+                    @if(!$booking->ca_customer_id)
                     <i class="fa fa-circle-info text-info" data-bs-toggle="tooltip" title="Esse cliente não existe no Conta Azul"></i>
                     @endif
                     {{$booking->name}}
@@ -47,7 +47,7 @@ $total = 0;
                 </td>
                 <td>{{$booking->employee->firstname}} {{$booking->employee->lastname}}</td>
                 <td>
-                    @if($booking->ca_service_id)
+                    @if(!$booking->ca_service_id)
                     <i class="fa fa-circle-info text-info" data-bs-toggle="tooltip" title="Esse serviço não existe no Conta Azul"></i>
                     @endif
                     {{$booking->service->name}}
