@@ -73,21 +73,22 @@ case 6: return 'Sáb';
                 @for ($i = 0; $i <= 13; $i++)
                     <td class="{{$current->dayOfWeek === 0 ? 'weekend' : ''}}{{$current == $today ? 'today' : '' }}">
                         @foreach($employee->bookings()->orderBy('date')->get() as $booking)
-                            @if($booking->status != 'C' && $booking->date >= $current && $booking->date <= $limit) <span title="{{$booking->service->name}}" class="appointment badge {{status($booking)}}">
-                                <div href="{{route('booking.edit', $booking)}}" style="position: relative;">
-                                    <span>{{$booking->date->format('H:i')}}</span> <span>{{$booking->name}}</span><br/>
-                                    <small>R$ {{number_format($booking->service->price, 2, ',', '.')}}</small><br/>
-                                    <div class="mt-2">
-                                    <a href="{{route('booking.edit', $booking)}}"><i class="fas fa-search fa-lg"></i></a>
-                                    @if($booking->status === 'A')
-                                    <a href="{{route('manager.pay', $booking)}}" onclick="return confirm('Deseja marcar esse agendamento como pago?');" alt="Marcar como pago" style="position:absolute; right:0; bottom: 0;"><i class="fas fa-money-bill fa-2x"></i></a>
-                                    @endif
+                            @if($booking->status != 'C' && $booking->date >= $current && $booking->date <= $limit)
+                                <span title="{{$booking->service->name}}" class="appointment badge {{status($booking)}}">
+                                    <div href="{{route('booking.edit', $booking)}}" style="position: relative;">
+                                        <span>{{$booking->date->format('H:i')}}</span> <span>{{$booking->name}}</span><br/>
+                                        <small>R$ {{number_format($booking->service->price, 2, ',', '.')}}</small><br/>
+                                        <div class="mt-2">
+                                        <a href="{{route('booking.edit', $booking)}}"><i class="fas fa-search fa-lg"></i></a>
+                                        @if($booking->status === 'A')
+                                        <a href="{{route('manager.pay', $booking)}}" onclick="return confirm('Deseja marcar esse agendamento como pago?');" alt="Marcar como pago" style="position:absolute; right:0; bottom: 0;"><i class="fas fa-money-bill fa-2x"></i></a>
+                                        @endif
+                                        </div>
                                     </div>
-                                </div>
-                                @php
-                                    if($booking->status != 'C')
-                                        $totalWeek[$i] = $totalWeek[$i] + $booking->service->price;
-                                @endphp
+                                    @php
+                                        if($booking->status != 'C')
+                                            $totalWeek[$i] = $totalWeek[$i] + $booking->service->price;
+                                    @endphp
                                 </span>
                             @endif
                         @endforeach
