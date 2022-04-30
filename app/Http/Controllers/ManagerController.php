@@ -103,6 +103,7 @@ class ManagerController extends Controller
             where
                 b.date >= :start
                 and b.date <= :end
+                and b.status <> 'C'
             order by e.id, b.date;";
 
         $data = DB::select($query, ['start' => $start, 'end' => $end]);
@@ -131,6 +132,7 @@ class ManagerController extends Controller
                 inner join service_categories c on c.id = s.category_id
             where
                 b.date >= :start and b.date <= :end
+                and b.status <> 'C'
             group by 1, 2
             order by 1, 2
         ) t1;";
