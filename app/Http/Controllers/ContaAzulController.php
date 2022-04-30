@@ -19,7 +19,7 @@ class ContaAzulController extends Controller
     private $clientSecret = "z3aXSRBuFoj1qtFyW0YVy11CQvy4SDg7";
     private $state = "DCEeFWf45A53sdfKef424";
     private $scope = "sales";
-    private $redirectUri = "http://localhost:8000/conta-azul/login-callback";
+    private $redirectUri = "https://agenda.kenkostudio.com.br/conta-azul/login-callback";
     private $caApiUrl = "https://api.contaazul.com";
     private $caAuthUrl = "https://api.contaazul.com/auth/authorize";
     private $caTokenUrl = "https://api.contaazul.com/oauth2/token";
