@@ -44,20 +44,6 @@ return false;
                             @enderror
                         </div>
                     </div>
-                    <!-- <div class="form-group row">
-                        <label for="caService" class="col-sm-2 col-form-label">Conta Azul</label>
-                        <div class="col-md-10">
-                            <select class="form-select" name="ca_id" id="ca_id">
-                                <option value="">--selecione--</option>
-                                @foreach($caServices as $caService)
-                                <option value="{{$caService->id}}" {{$caService->id === $service->ca_id ? 'selected' : ''}}>{{$caService->name}}</option>
-                                @endforeach
-                            </select>
-                            @error('caService')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div> -->
                     @checkbox(['name' => 'private', 'label' => 'Privado', 'checked' => $service->private])
 
                     <div class="row">
