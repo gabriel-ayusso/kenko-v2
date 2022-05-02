@@ -44,7 +44,7 @@ return false;
                             @enderror
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <!-- <div class="form-group row">
                         <label for="caService" class="col-sm-2 col-form-label">Conta Azul</label>
                         <div class="col-md-10">
                             <select class="form-select" name="ca_id" id="ca_id">
@@ -57,7 +57,7 @@ return false;
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                    </div>
+                    </div> -->
                     @checkbox(['name' => 'private', 'label' => 'Privado', 'checked' => $service->private])
 
                     <div class="row">

@@ -83,11 +83,10 @@ class ServiceController extends Controller
     public function edit(Service $service)
     {
         $categories = ServiceCategory::orderBy('name')->get();
-        $caServices = DB::select("select id, name from ca_services order by name");
+        // $caServices = DB::select("select id, name from ca_services order by name");
         return view('services.edit', [
             'service' => $service,
-            'categories' => $categories,
-            'caServices' => $caServices,
+            'categories' => $categories
         ]);
     }
 
@@ -116,7 +115,7 @@ class ServiceController extends Controller
         $service->comission = $request->input('comission');
         $service->private = $request->boolean('private');
         $service->category_id = $request->input('category_id');
-        $service->ca_id = $request->input('ca_id');
+        // $service->ca_id = $request->input('ca_id');
         $service->save();
 
         session()->flash('success', "Serviço alterado com sucesso.");

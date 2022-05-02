@@ -47,9 +47,9 @@ if(!function_exists('getCycleText')) {
             @foreach($employee->transactions()->where('account_cycle_id', isset($cycle) ? $cycle->id : null)->orderBy('date', 'desc')->get() as $transaction)
             @if(!$transaction->booking || $transaction->booking->status !== 'C')
             <tr>
-                <td>{{$transaction->date->format('d/m/Y')}}</td>
+                <td>{{$transaction->date->format('d/m')}}</td>
                 <td>{{number_format($transaction->amount, 2)}}</td>
-                <td class="text-muted">
+                <td class="text-muted text-truncate">
                     @if($transaction->booking)
                     @switch($transaction->booking->status)
                         @case('A')
