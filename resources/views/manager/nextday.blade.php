@@ -53,7 +53,7 @@ $fullwidth = true;
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>{{$service->ca_sale_id != null ? 'OK' : ''}}</td>
             <td></td>
         </tr>
         @endforeach
