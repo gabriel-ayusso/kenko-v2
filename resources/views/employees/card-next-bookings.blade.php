@@ -14,7 +14,7 @@ $today = Carbon\Carbon::parse('today');
                 @foreach($employee->bookings()->where('status', '<>', 'C')->where('date', '>=', $today)->orderBy('date', 'desc')->get() as $booking)
                 <tr>
                     <td>
-                        <a href="{{route('bookings.show', $booking)}}">{{$booking->date->format('d/m/Y H:i')}}</a>
+                        <a href="{{route('bookings.show', $booking)}}">{{$booking->date->format('d/m H:i')}}</a>
                         @switch($booking->status)
                             @case('A')
                                 <span class="badge bg-primary">agendado</span>
