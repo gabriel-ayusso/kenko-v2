@@ -41,7 +41,7 @@
 
                 @if(count($wrongTransactions) > 0)
                 <div class="row">
-                    <div class="col text-right">
+                    <div class="col text-end">
                         <form method="POST" action="{{url('/configuration/adjustTransactionCycles')}}">
                             @csrf
                             <button type="submit" class="btn btn-danger btn-primary" onclick="return confirm('ATENÇÃO: essa ação não pode ser desfeita. Deseja continuar?')">Ajustar</button>

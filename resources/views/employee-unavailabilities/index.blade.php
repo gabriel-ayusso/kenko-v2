@@ -29,7 +29,7 @@
                             <td>{{$unavailability->start->format('d/m/Y H:i')}}</td>
                             <td>{{$unavailability->end->format('d/m/Y H:i')}}</td>
                             <td>{{$unavailability->description}}</td>
-                            <td class="text-right">
+                            <td class="text-end">
                                 <form method="POST" action="{{route('unavailabilities.destroy', ['employee' => $employee, 'unavailability' => $unavailability])}}">
                                     @csrf
                                     @method('DELETE')

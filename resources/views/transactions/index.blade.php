@@ -16,7 +16,7 @@
         <th>Data</th>
         <th>Funcionário</th>
         <th>Descrição</th>
-        <th class="text-right">Valor</th>
+        <th class="text-end">Valor</th>
         <th></th>
     </tr>
     @foreach($transactions as $transaction)
@@ -24,8 +24,8 @@
         <td>{{$transaction->date->format('d/m/Y H:i')}}</td>
         <td>@if($transaction->employee) {{$transaction->employee->firstname}} {{$transaction->employee->lastname}} @else - @endif</td>
         <td style="max-width: 250px">{{$transaction->description}}</td>
-        <td class="text-right">R$ {{number_format($transaction->amount, 2, ',', '.')}}</td>
-        <td class="text-right">
+        <td class="text-end">R$ {{number_format($transaction->amount, 2, ',', '.')}}</td>
+        <td class="text-end">
             <form method="POST" action="{{route('transactions.destroy', $transaction)}}">
                 @csrf
                 @method('DELETE')

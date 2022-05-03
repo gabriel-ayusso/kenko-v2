@@ -48,7 +48,7 @@ $fullwidth = true;
             <td>{{$service->employee}}</td>
             <td>{{$service->service}}</td>
             <td>{{number_format($service->price,2)}}</td>
-            <td></td>
+            <td>{{$service->comments}}</td>
             <td></td>
             <td></td>
             <td></td>

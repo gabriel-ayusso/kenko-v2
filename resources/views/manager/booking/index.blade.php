@@ -5,7 +5,7 @@
     <div class="col-md-6">
         <h1>Agendamentos Registrados</h1>
     </div>
-    <div class="col-md-6 clearfix">
+    <div class="col-md-6 text-end">
         <a href="{{route('booking.create')}}" class="btn btn-primary float-right ml-2">Novo</a>
     </div>
 </div>
@@ -43,7 +43,7 @@
             <td>{{$booking->name}}</td>
             <td>{{$booking->employee->firstname}} {{$booking->employee->lastname}}</td>
             <td>{{$booking->service->name}}</td>
-            <td class="text-right">
+            <td class="text-end">
                 <form method="POST" action="{{route('booking.destroy', $booking)}}">
                     @csrf
                     @method('DELETE')

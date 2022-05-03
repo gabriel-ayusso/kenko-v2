@@ -105,7 +105,7 @@ case 6: return 'Sáb';
             <tr class="subtotals {{$category->name === 'Massagem' ? 'text-bold' : ''}}">
                 <td>{{$category->name}}</td>
                 @for($i=0; $i <= 13; $i++)
-                <td class="text-right">{{number_format($category["total_".($i+1)], 2, ',', '.')}} ({{ $totalWeek[$i] == 0 ? 0 : number_format($category["total_" . ($i+1)] / $totalWeek[$i] * 100, 0) }}%)</td>
+                <td class="text-end">{{number_format($category["total_".($i+1)], 2, ',', '.')}} ({{ $totalWeek[$i] == 0 ? 0 : number_format($category["total_" . ($i+1)] / $totalWeek[$i] * 100, 0) }}%)</td>
                 @endfor
             </tr>
             @endforeach
@@ -113,7 +113,7 @@ case 6: return 'Sáb';
             <tr class="totals">
                 <td><strong>TOTAL</strong></td>
                 @for($i=0; $i <= 13; $i++)
-                <td class="text-right">R$ {{number_format($totalWeek[$i], 2, ',', '.')}}</td>
+                <td class="text-end">R$ {{number_format($totalWeek[$i], 2, ',', '.')}}</td>
                 @endfor
             </tr>
         </tbody>

@@ -21,7 +21,7 @@
     <tr>
         <td>{{$category->name}}</td>
         <td>{{$category->order}}</td>
-        <td class="text-right">
+        <td class="text-end">
             <form method="POST" action="{{route('categories.destroy', $category)}}">
                 @csrf
                 @method('DELETE')

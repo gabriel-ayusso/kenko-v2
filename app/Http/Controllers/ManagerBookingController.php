@@ -94,6 +94,7 @@ class ManagerBookingController extends Controller
             'status' => $request->input('status'),
             'confirmation_hash' => Str::uuid()->toString(),
             'ip' => $request->ip(),
+            'comments' => $request->input('comments'),
         ]);
         if ($request->boolean('applyComission')) {
             $booking->addComission();
@@ -157,9 +158,10 @@ class ManagerBookingController extends Controller
         $booking->date = Carbon::parse($request->input('date'));
         $booking->service_id = $request->input('service_id');
         $booking->employee_id = $request->input('employee_id');
+        $booking->comments = $request->input('comments');
         $booking->status = $request->input('status');
         $booking->duration = $service->time;
-        $booking->save();
+                $booking->save();
 
         if ($request->boolean('recalculate')) {
             $current_cycle = AccountCycle::current();

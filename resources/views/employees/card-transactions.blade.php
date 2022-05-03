@@ -31,7 +31,7 @@ if(!function_exists('getCycleText')) {
 @endphp
 
 <div class="card">
-    <div class="card-header">Transações <span class="text-primary text-right float-right">Ciclo <strong>{{isset($cycle) ? getCycleText($cycle) : '(não definido)'}}</strong></span></div>
+    <div class="card-header">Transações <span class="text-primary text-end float-right">Ciclo <strong>{{isset($cycle) ? getCycleText($cycle) : '(não definido)'}}</strong></span></div>
     <div class="card-body">
         <h5>
             <span class="text-primary">Saldo: R$ {{number_format($sumPaid,2)}}</span>

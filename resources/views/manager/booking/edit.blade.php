@@ -65,6 +65,8 @@
                     </div>
                 </div>
 
+                @textarea(['name' => 'comments', 'label' => 'Observações', 'required' => false])
+
                 @checkbox(['name' => 'recalculate', 'label' => 'Recalcular comissão', 'help' => 'Se marcado vai atualizar a comissão para o serviço selecionado.', 'checked' => true])
 
                 <div class="row">

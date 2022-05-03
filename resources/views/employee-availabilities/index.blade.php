@@ -48,7 +48,7 @@ default: return '-';
                         <td>{{getAvailability($availability->weekday)}}</td>
                         <td>{{$availability->start->format('H:i')}}</td>
                         <td>{{$availability->end->format('H:i')}}</td>
-                        <td class="text-right">
+                        <td class="text-end">
                             <form method="POST" action="{{route('availabilities.destroy', ['employee' => $employee, 'availability' => $availability])}}">
                                 @csrf
                                 @method('DELETE')

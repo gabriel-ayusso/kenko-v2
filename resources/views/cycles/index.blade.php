@@ -21,7 +21,7 @@
     <tr>
         <td>{{$cycle->start->format('d/m/Y')}}</td>
         <td>{{$cycle->end ? $cycle->end->format('d/m/Y'): '-'}}</td>
-        <td class="text-right">
+        <td class="text-end">
             <form method="POST" action="{{route('cycles.destroy', $cycle)}}">
                 @csrf
                 @method('DELETE')

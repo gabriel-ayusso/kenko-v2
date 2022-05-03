@@ -6,7 +6,7 @@
     <div class="col-md-6">
         <h1>Serviços</h1>
     </div>
-    <div class="col-md-6 text-right"><a class="btn btn-primary" href="{{route('services.create')}}">Novo</a></div>
+    <div class="col-md-6 text-end"><a class="btn btn-primary" href="{{route('services.create')}}">Novo</a></div>
 </div>
 
 <table class="table">

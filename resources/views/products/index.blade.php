@@ -6,7 +6,7 @@
     <div class="col-md-6">
         <h1>Produtos</h1>
     </div>
-    <div class="col-md-6 text-right"><a class="btn btn-primary" href="{{route('products.create')}}">Novo</a></div>
+    <div class="col-md-6 text-end"><a class="btn btn-primary" href="{{route('products.create')}}">Novo</a></div>
 </div>
 
 <table class="table">
@@ -23,7 +23,7 @@
         <td>{{$product->description}}</td>
         <td>{{number_format($product->comission)}}%</td>
         <td>R$ {{number_format($product->price, 2)}}</td>
-        <td class="text-right">
+        <td class="text-end">
             <form method="POST" action="{{route('products.destroy', $product)}}">
                 @csrf
                 @method('DELETE')

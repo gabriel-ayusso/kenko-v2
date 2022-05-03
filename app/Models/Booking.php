@@ -29,6 +29,7 @@ class Booking extends Model implements Auditable
         'ca_sale_id',
         'ca_client_id',
         'ca_service_id',
+        'comments',
     ];
 
     protected $casts = [

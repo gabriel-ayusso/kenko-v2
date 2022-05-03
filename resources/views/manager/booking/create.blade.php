@@ -65,6 +65,8 @@
                     </div>
                 </div>
 
+                @textarea(['name' => 'comments', 'label' => 'Observações', 'required' => false])
+
                 @checkbox(['name' => 'applyComission', 'label' => 'Aplica comissão', 'checked' => true, 'value' => old('applyComission'), 'help' => 'Se essa opção não estiver marcada o agendamento não lancará comissão ao funcionário.'])
                 @checkbox(['name' => 'checkAvailability', 'label' => 'Valida disponibilidade de horário', 'value' => old('applyComission'), 'checked' => true, 'help' => 'Se desligada, o sistema não validará se o horário selecionado está disponível para o funcionário.'])
                 @checkbox(['name' => 'sendEmail', 'label' => 'Envia emails de notificação', 'value' => old('applyComission'), 'checked' => true])

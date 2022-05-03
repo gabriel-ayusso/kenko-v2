@@ -24,7 +24,7 @@ $total = 0;
 
     <div class="col-md-6">
         <div class="card">
-            <div class="card-body text-right">
+            <div class="card-body text-end">
                 <p>Nota gerada em {{$now->format('d/m/Y H:i:s')}}</p>
                 <p><a href="{{env('APP_URL')}}">https://agenda.kenkostudio.com.br</a></p>
             </div>
@@ -39,7 +39,7 @@ $total = 0;
             <table class="table table-striped">
                 <tr>
                     <th>Serviço</th>
-                    <th class="text-right">Valor (R$)</th>
+                    <th class="text-end">Valor (R$)</th>
                 </tr>
                 @foreach($bookings as $booking)
                 @php $total += $booking->service->price @endphp
@@ -49,7 +49,7 @@ $total = 0;
                         <strong>{{$booking->service->name}}</strong> - {{$booking->name}}<br />
                         Profissional {{$booking->employee->firstname}} {{$booking->employee->lastname}}
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                         R$ {{number_format($booking->service->price, 2, ',', '.')}}
                     </td>
                 </tr>
@@ -58,7 +58,7 @@ $total = 0;
                     <td>
                         <strong>Total</strong>
                     </td>
-                    <td class="text-right">
+                    <td class="text-end">
                         <strong>R$ {{number_format($total, 2, ',', '.')}}</strong>
                     </td>
                 </tr>

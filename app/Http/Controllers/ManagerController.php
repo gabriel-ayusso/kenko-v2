@@ -213,6 +213,7 @@ class ManagerController extends Controller
         $query = "select
                 b.date,
                 b.name,
+                b.comments,
                 b.ca_sale_id,
                 concat(e.firstname, ' ', e.lastname) employee,
                 s.name service,

@@ -6,7 +6,7 @@
     <div class="col-md-6">
         <h1>Funcionários</h1>
     </div>
-    <div class="col-md-6 text-right"><a href="{{route('employees.create')}}" class="btn btn-primary">Novo</a></div>
+    <div class="col-md-6 text-end"><a href="{{route('employees.create')}}" class="btn btn-primary">Novo</a></div>
 </div>
 
 
@@ -20,7 +20,7 @@
     <tr>
         <td><a href="{{route('employees.show', $employee)}}">{{$employee->firstname}}</a></td>
         <td>{{$employee->lastname}}</td>
-        <td class="text-right">
+        <td class="text-end">
             <form method="POST" action="{{route('employees.destroy', $employee)}}">
                 @csrf
                 @method('DELETE')
